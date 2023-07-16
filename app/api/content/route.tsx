@@ -1,6 +1,7 @@
 // This is how we expose APIs
 // Just export a function with the name of the HTTP method you want to use
 
+import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 
 // Dummy data
@@ -20,5 +21,7 @@ const posts = [
   ];
 
 export async function GET() {
-    return NextResponse.json(posts);
+
+  const session = await getServerSession();  //this code will work both in API routes AND server components
+  return NextResponse.json(posts);
 }
