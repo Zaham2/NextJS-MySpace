@@ -7,7 +7,6 @@ export default async function Home() {
   const session = await getServerSession();
 
   if(!session){
-    console.log('not logged in!')
     redirect('/api/auth/signin');
   }
 
