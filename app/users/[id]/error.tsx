@@ -1,9 +1,13 @@
 "use client"
 
+// NTS: revise this syntax
 export default function Error({
     error,
-    reset
-}){
+    reset,
+  }: {
+    error: Error;
+    reset: () => void;
+  }){
     console.log(error)
     return(
         <>
