@@ -1,5 +1,6 @@
 "use client"
 
+// NTS: revise this syntax
 export default function Error({
     error,
     reset,
